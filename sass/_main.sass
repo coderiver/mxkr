@@ -1,216 +1,191 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//header
+.header__up
+	padding: 20px 0
+	background: #232A34
+	+clr 
+	
+.menu
+	float: left
+	margin-top: 10px 
+	+clr
+	.menu__list
+		float: left
+		a
+			padding: 0 10px
+			font-size: 11px
+			color: #fff 
+			text-transform: uppercase
+			letter-spacing: 0.1em
+			+gprobold 
+			&:hover
+				color: #8696AE
+
+.logo
+	display: block 
+	float: left
+	margin-left: 40px
+	width: 36px
+	height: 36px   
+	background: url(../img/svg/logo.svg) center center no-repeat	 
+				
+.profile
+	float: right
+	margin-top: 5px 
+	color: #FFF
+	font-size: 0 
+	+clr
+	.profile__link, .profile__span, .dropdown__text
+		display: inline-block
+		font-size: 11px
+		letter-spacing: 0.1em
+		vertical-align: middle		
+		+gprobold
+	.profile__span
+		margin-right: 10px
+		&:first-child
+			margin-right: 20px  	
+	.profile__link, .dropdown__text
+		margin: 0 5px
+		padding: 5px 10px 
+		text-transform: uppercase
+		color: #FFF 
+		background-color: #3e4b5d
+		border-radius: 50px
+		&.is-active
+			border-radius: 15px 15px 0 0 
+	.icon-support
+		padding: 2px 	 	 
+		font-size: 16px
+	.dropdown
+		display: inline-block
+		width: 115px
+		margin: 0 5px
+		
+.dropdown
+	position: relative
+	.dropdown__text
+		margin: 0
+		padding: 5px 0
+		color: #FFF 
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+		text-align: center
+	.dropdown__menu
+		width: 100% 
+		position: absolute
+		top: 20px
+		left: 0
+		padding: 20px 0 10px
+		background: #3E4B5D 
+		border-radius: 0 0 20px 20px
+	.dropdown__link
+		display: block
+		padding: 0 0 5px 8px
+		color: #989FA9
+		font-size: 11px 
+		&:hover
+			color: #03BCC5		 
+	.icon-user, .icon-settings, .icon-options
+		font-size: 14px 
+		padding-right: 5px 
+
+
+.header__down
+	padding: 20px 0
+	border-bottom: 2px solid #e1e6e9
+	+clr
+
+.exchange
+	float: left
+	margin-top: 10px 
+	font-size: 11px 
+	.exchange__list
+		display: inline-block
+		padding: 0 10px
+		+gpromed
+		span
+			margin-right: 10px 
+			padding: 5px 10px
+			border-radius: 50px
+			text-transform: uppercase
+			color: #FFF 
+			+gprobold
+	.is-green
+		background: #87c77e
+	.is-blue
+		background: #5187B6
+	.is-yellow
+		background: #FDBE74
+	.is-grey
+		background: #BDBDC5 	  	 	 	
+
+.total
+	float: right
+	font-size: 11px
+	letter-spacing: 0.1em 
+	+gprobold
+	.total__span
+		margin-right: 10px 
+		padding: 5px 10px
+		color: #FFF
+		text-transform: uppercase  
+		background: #000 
+		border-radius: 50px
+	.txt-medium
+		margin-right: 4px 
+		+gpromed
+	.btn
+		margin-left: 30px 
+		padding: 10px 13px 
+		text-transform: uppercase
+		color: #FFF
+		background: #72C366 
+		border-radius: 50px
+		+gprobold 
+		&:hover
+			background: darken(#72C366, 10%) 
+	.icon-plus
+		padding-left: 10px 
+		font-size: 11px 		
+
+//footer
+.footer
+	font-size: 11px 
+	.footer__up
+		padding: 35px 0 45px 
+		background: #232A34 
+		+clr
+	.footer__bl
+		float: left
+		min-width: 200px 
+		&:first-child
+			margin-left: 10px 
+		h3
+			margin-bottom: 15px 
+			color: #fff
+			text-transform: uppercase 
+			+gprobold
+	.footer__link
+		display: block 
+		padding-bottom: 10px 
+		color: #989FA9
+		letter-spacing: 0.1em 
+		&:hover
+			color: #03BCC5	
+	.footer__ico
+		margin-left: -0.2em		
+		font-size: 16px
+		color: #858687
+		margin-right: 23px 
+		font-size: 23px 
+		+transition(color 0.2s ease)
+		&:hover
+			color: lighten(#858687, 10%) 
+	.footer__down
+		padding: 25px 0
+		background: #1B2028
+		.footer__link
+			padding-bottom: 0 
+	.footer__span
+		color: #989FA9	

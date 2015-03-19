@@ -47,120 +47,43 @@
 // p
 // 	+jpg(bla)
 
++font(GothaProBol, GothaProBol)
++font(GothaProReg, GothaProReg)
++font(GothaProMedium, GothaProMedium)
+
+=gpro
+	font-family: "GothaProReg", Arial, sans-serif   
+=gprobold
+	font-family: "GothaProBol", Arial, sans-serif
+=gpromed
+	font-family: "GothaProMedium", Arial, sans-serif 	
+	 
 
 body
-	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	+gpro
+
+a
+	text-decoration: none
+
+.out
+	min-height: 100% 
+	margin-bottom: -328px
+	&:after
+		content: ""
+		display: block
+		height: 328px
+	
+.is-hidden
+	visibility: hidden
+	+opacity(0)
+
+.is-visible
+	visibility: visible
+	+opacity(1)
+
+.btn
+	&:active
+		position: relative
+		top: 1px	

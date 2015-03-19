@@ -1,10 +1,11 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
 
 img, fieldset, a img { border: none; }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; border-radius: 0; }
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
 
 input[type="submit"], button { cursor: pointer; }
 input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
@@ -20,9 +21,123 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: GothaProBol; src: url("fonts/GothaProBol.eot"); src: url("fonts/GothaProBol.eot?#iefix") format("embedded-opentype"), url("fonts/GothaProBol.woff2") format("woff2"), url("fonts/GothaProBol.woff") format("woff"), url("fonts/GothaProBol.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: GothaProReg; src: url("fonts/GothaProReg.eot"); src: url("fonts/GothaProReg.eot?#iefix") format("embedded-opentype"), url("fonts/GothaProReg.woff2") format("woff2"), url("fonts/GothaProReg.woff") format("woff"), url("fonts/GothaProReg.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: GothaProMedium; src: url("fonts/GothaProMedium.eot"); src: url("fonts/GothaProMedium.eot?#iefix") format("embedded-opentype"), url("fonts/GothaProMedium.woff2") format("woff2"), url("fonts/GothaProMedium.woff") format("woff"), url("fonts/GothaProMedium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-size: 12px; line-height: 1.4; font-family: "GothaProReg", Arial, sans-serif; }
+
+a { text-decoration: none; }
+
+.out { min-height: 100%; margin-bottom: -328px; }
+.out:after { content: ""; display: block; height: 328px; }
+
+.is-hidden { visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+
+.is-visible { visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+
+.btn:active { position: relative; top: 1px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.l-center { width: 1170px; margin: 0 auto; padding: 0 20px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
+.l-center:after { content: " "; display: table; clear: both; }
+.l-center.no-pad { padding: 0; }
+
+@font-face { font-family: 'custom'; src: url("fonts/custom.eot?90671373"); src: url("fonts/custom.eot?90671373#iefix") format("embedded-opentype"), url("fonts/custom.woff?90671373") format("woff"), url("fonts/custom.ttf?90671373") format("truetype"), url("fonts/custom.svg?90671373#custom") format("svg"); font-weight: normal; font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) { @font-face { font-family: 'custom'; src: url('../font/custom.svg?90671373#custom') format('svg'); }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before { font-family: "custom"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: .2em; text-align: center; /* opacity: .8; */ /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; /* fix buttons height, for twitter bootstrap */ line-height: 1em; /* Animation center compensation - margins should be symmetric */ /* remove if not needed */ margin-left: .2em; /* you can be more comfortable with increased icons size */ /* font-size: 120%; */ /* Uncomment for 3D effect */ /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-settings:before { content: '\e800'; }
+
+/* '' */
+.icon-user:before { content: '\e801'; }
+
+/* '' */
+.icon-options:before { content: '\e802'; }
+
+/* '' */
+.icon-support:before { content: '\e803'; }
+
+/* '' */
+.icon-plus:before { content: '\e804'; }
+
+/* '' */
+.icon-google:before { content: '\e805'; }
+
+/* '' */
+.icon-mail:before { content: '\e806'; }
+
+/* '' */
+.icon-twitter:before { content: '\e807'; }
+
+/* '' */
+.icon-fb:before { content: '\e808'; }
+
+/* '' */
+.header__up { padding: 20px 0; background: #232a34; *zoom: 1; }
+.header__up:after { content: " "; display: table; clear: both; }
+
+.menu { float: left; margin-top: 10px; *zoom: 1; }
+.menu:after { content: " "; display: table; clear: both; }
+.menu .menu__list { float: left; }
+.menu .menu__list a { padding: 0 10px; font-size: 11px; color: white; text-transform: uppercase; letter-spacing: 0.1em; font-family: "GothaProBol", Arial, sans-serif; }
+.menu .menu__list a:hover { color: #8696ae; }
+
+.logo { display: block; float: left; margin-left: 40px; width: 36px; height: 36px; background: url(../img/svg/logo.svg) center center no-repeat; }
+
+.profile { float: right; margin-top: 5px; color: white; font-size: 0; *zoom: 1; }
+.profile:after { content: " "; display: table; clear: both; }
+.profile .profile__link, .profile .profile__span, .profile .dropdown__text { display: inline-block; font-size: 11px; letter-spacing: 0.1em; vertical-align: middle; font-family: "GothaProBol", Arial, sans-serif; }
+.profile .profile__span { margin-right: 10px; }
+.profile .profile__span:first-child { margin-right: 20px; }
+.profile .profile__link, .profile .dropdown__text { margin: 0 5px; padding: 5px 10px; text-transform: uppercase; color: white; background-color: #3e4b5d; border-radius: 50px; }
+.profile .profile__link.is-active, .profile .dropdown__text.is-active { border-radius: 15px 15px 0 0; }
+.profile .icon-support { padding: 2px; font-size: 16px; }
+.profile .dropdown { display: inline-block; width: 115px; margin: 0 5px; }
+
+.dropdown { position: relative; }
+.dropdown .dropdown__text { margin: 0; padding: 5px 0; color: white; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: center; }
+.dropdown .dropdown__menu { width: 100%; position: absolute; top: 20px; left: 0; padding: 20px 0 10px; background: #3e4b5d; border-radius: 0 0 20px 20px; }
+.dropdown .dropdown__link { display: block; padding: 0 0 5px 8px; color: #989fa9; font-size: 11px; }
+.dropdown .dropdown__link:hover { color: #03bcc5; }
+.dropdown .icon-user, .dropdown .icon-settings, .dropdown .icon-options { font-size: 14px; padding-right: 5px; }
+
+.header__down { padding: 20px 0; border-bottom: 2px solid #e1e6e9; *zoom: 1; }
+.header__down:after { content: " "; display: table; clear: both; }
+
+.exchange { float: left; margin-top: 10px; font-size: 11px; }
+.exchange .exchange__list { display: inline-block; padding: 0 10px; font-family: "GothaProMedium", Arial, sans-serif; }
+.exchange .exchange__list span { margin-right: 10px; padding: 5px 10px; border-radius: 50px; text-transform: uppercase; color: white; font-family: "GothaProBol", Arial, sans-serif; }
+.exchange .is-green { background: #87c77e; }
+.exchange .is-blue { background: #5187b6; }
+.exchange .is-yellow { background: #fdbe74; }
+.exchange .is-grey { background: #bdbdc5; }
+
+.total { float: right; font-size: 11px; letter-spacing: 0.1em; font-family: "GothaProBol", Arial, sans-serif; }
+.total .total__span { margin-right: 10px; padding: 5px 10px; color: white; text-transform: uppercase; background: black; border-radius: 50px; }
+.total .txt-medium { margin-right: 4px; font-family: "GothaProMedium", Arial, sans-serif; }
+.total .btn { margin-left: 30px; padding: 10px 13px; text-transform: uppercase; color: white; background: #72c366; border-radius: 50px; font-family: "GothaProBol", Arial, sans-serif; }
+.total .btn:hover { background: #53b145; }
+.total .icon-plus { padding-left: 10px; font-size: 11px; }
+
+.footer { font-size: 11px; }
+.footer .footer__up { padding: 35px 0 45px; background: #232a34; *zoom: 1; }
+.footer .footer__up:after { content: " "; display: table; clear: both; }
+.footer .footer__bl { float: left; min-width: 200px; }
+.footer .footer__bl:first-child { margin-left: 10px; }
+.footer .footer__bl h3 { margin-bottom: 15px; color: white; text-transform: uppercase; font-family: "GothaProBol", Arial, sans-serif; }
+.footer .footer__link { display: block; padding-bottom: 10px; color: #989fa9; letter-spacing: 0.1em; }
+.footer .footer__link:hover { color: #03bcc5; }
+.footer .footer__ico { margin-left: -0.2em; font-size: 16px; color: #858687; margin-right: 23px; font-size: 23px; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; -webkit-transition: color 0.2s ease; transition: color 0.2s ease; }
+.footer .footer__ico:hover { color: #9fa0a0; }
+.footer .footer__down { padding: 25px 0; background: #1b2028; }
+.footer .footer__down .footer__link { padding-bottom: 0; }
+.footer .footer__span { color: #989fa9; }
