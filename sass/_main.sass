@@ -52,7 +52,7 @@
 		background-color: #3e4b5d
 		border-radius: 50px
 		&.is-active
-			border-radius: 15px 15px 0 0 
+			border-radius: 12px 12px 0 0 
 	.icon-support
 		padding: 2px 	 	 
 		font-size: 16px
@@ -78,7 +78,7 @@
 		left: 0
 		padding: 20px 0 10px
 		background: #3E4B5D 
-		border-radius: 0 0 20px 20px
+		border-radius: 0 0 12px 12px
 	.dropdown__link
 		display: block
 		padding: 0 0 5px 8px
@@ -189,3 +189,85 @@
 			padding-bottom: 0 
 	.footer__span
 		color: #989FA9	
+		
+//main
+h1
+	margin-top: 55px 
+	text-align: center
+	color: #293D5C 
+	+gprobold	
+	span
+		text-transform: uppercase	
+		
+.main
+	display: flex 
+	-webkit-display: flex
+	margin: 70px 0 
+	font-size: 11px
+	border-right: 1px solid #e3e8ea
+	border-radius: 10px
+	.main__bl
+		position: relative
+		width: 33% 
+		background: #fff 
+		text-align: center
+		padding: 45px 5.2%
+		z-index: 1
+		+box
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%  
+			border: 1px solid #e3e8ea
+			border-right-width: 0 
+			border-radius: 10px
+		&:after
+			content: ""
+			visibility: hidden 
+			position: absolute
+			top: -5%
+			left: -4%
+			width: 108%
+			height: 110%
+			border: 3px solid #03bcc5 	
+			border-radius: 10px
+			box-shadow: inset 30px 30px 0px 0px #fff, inset -30px -30px 0px 0px #fff
+			transform: scale(0.8)	
+		h2
+			margin-bottom: 20px 
+			color: #293D5C
+			text-transform: uppercase 
+			+gprobold
+		p
+			color: #bdbdc5
+			+gpromed
+		&:hover
+			z-index: 2
+			h2
+				color: #03BCC5 
+			&:before
+				visibility: hidden
+			&:after
+				visibility: visible
+				transform: scale(1)
+				+transition(transform 0.3s ease)
+			.shop
+				+s(shop-active)
+			.trade
+				+s(trade-active)
+			.wallet
+				+s(wallet-active)	
+	.main__img
+		margin: 0 auto 30px					
+	.shop
+		+s(shop)
+	.trade
+		+s(trade)		
+	.wallet
+		+s(wallet)
+			
+
+
