@@ -53,9 +53,15 @@
 		border-radius: 50px
 		&.is-active
 			border-radius: 12px 12px 0 0 
+		
 	.icon-support
 		padding: 2px 	 	 
 		font-size: 16px
+		padding: 2px 5px
+		&:before
+			position: relative
+			top: 2px 
+			left: 1px 
 	.dropdown
 		display: inline-block
 		width: 115px
@@ -79,11 +85,17 @@
 		padding: 20px 0 10px
 		background: #3E4B5D 
 		border-radius: 0 0 12px 12px
+		z-index: 200 
 	.dropdown__link
 		display: block
 		padding: 0 0 5px 8px
 		color: #989FA9
 		font-size: 11px 
+		i
+			position: relative
+			top: 3px 
+			&.icon-user
+				top: 2px 
 		&:hover
 			color: #03BCC5		 
 	.icon-user, .icon-settings, .icon-options
@@ -147,7 +159,9 @@
 			background: darken(#72C366, 10%) 
 	.icon-plus
 		padding-left: 10px 
-		font-size: 11px 		
+		font-size: 11px 
+		position: relative
+		top: 1px 		
 
 //footer
 .footer
@@ -198,6 +212,14 @@ h1
 	+gprobold	
 	span
 		text-transform: uppercase	
+	&.superheading
+		font-size: 40px 
+		text-transform: uppercase
+.byline
+	font-size: 14px 
+	color: #2A3E5B
+	+gpro
+	text-align: center
 		
 .main
 	display: flex 
@@ -206,6 +228,7 @@ h1
 	font-size: 11px
 	border-right: 1px solid #e3e8ea
 	border-radius: 10px
+	+clr
 	.main__bl
 		position: relative
 		width: 33% 
@@ -268,6 +291,302 @@ h1
 		+s(trade)		
 	.wallet
 		+s(wallet)
-			
+
+.wrapper
+	margin: 70px 0 
+	padding-bottom: 42px 
+	+clr
+.h2
+	+gpro
+	font-size: 16px 
+	font-weight: normal
+	color: #232A34 
+	text-transform: uppercase
+	margin-bottom: 22px 
+.more
+	font-size: 12px 
+	color: #222E3E 
+	+gpro
+	text-decoration: underline
+	margin-top: 18px 
+	display: inline-block
+.usera
+	width: 468px 
+	float: left
+	margin-left: 20px 
+	ul
+		list-style: none
+		li
+			position: relative
+			padding-left: 64px 
+			margin-bottom: 22px 
+			i
+				height: 36px 
+				width: 36px 
+				background: #E0E6E8
+				color: #fff  
+				position: absolute
+				top: -5px 
+				left: 0
+				text-align: center
+				font-size: 23px  
+				border-radius: 36px
+				
+				&:after
+					left: 17px 
+					width: 2px
+					background: #E0E6E8  
+					height: 26px 
+					position: absolute
+					bottom: -26px 
+					content: ' '
+				&:before
+					position: relative
+					top: 4px 
+				&.icon-twofactor,&.icon-verification
+					&:before
+						top: 6px 
+			span
+				display: block
+				font-size: 14px 
+				color: #222E3E
+				margin-bottom: 1px  
+			small
+				font-size:  14px
+				color: #BDBDC5 
+				display: block
+			&:last-child
+				padding-bottom: 0
+				margin-bottom: 0  
+				i
+					&:after
+						display: none
+.activity
+	width: 583px 
+	float: right
+	+gpro
+	table
+		width: 100%
+		border-spacing: 0
+		border-collapse: collapse
+		td
+			border-bottom: 1px solid #E0E6E8 
+			padding: 13px 0 
+		tr:hover
+			td
+				background: #F0FEFF  
+		.activity__text
+			font-size: 14px 
+			color: #222E3E
+			strong
+				font-weight: normal
+				+gprobold
+		.activity__date
+			font-size: 14px 
+			color: #BDBDC5 
+			padding-right: 7px 
+			padding-left: 7px 
+		.activity__icon
+			padding-left: 7px 
+			font-size: 17px 
+			i
+				position: relative
+				top: 3px 
+			.icon-in
+				color: #75C269 
+			.icon-out
+				color: #E46869 
+.select
+	margin: 47px 0 58px 0
+	text-align: center
+	font-size: 0 
+	.select__label
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px 
+		margin-right: 5px 
+		color: #BDBDC5 
+	.select__option
+		height: 28px 
+		line-height: 28px
+		text-transform: uppercase
+		font-size: 14px   
+		color: rgba(#fff,.5)
+		width: 142px
+		text-align: center
+		display: inline-block
+		vertical-align: middle 
+		background: #E0E6E8 
+		border: 1px solid #E0E6E8 
+		cursor: pointer
+		&.first
+			border-top-left-radius: 4px
+			border-bottom-left-radius: 4px
+		&.last
+			border-top-right-radius: 4px
+			border-bottom-right-radius: 4px
+		&.is-active
+			color: #2A3D5B
+			background: #fff  
+
+.offers
+	margin: 58px 0 75px 0
+.input
+	display: inline-block
+	position: relative
+	margin-right: 17px 
+	vertical-align: middle
+	input
+		border: 1px solid #E1E6E9 
+		line-height: normal
+		border-radius: 6px
+		padding-left: 20px  
+		padding-right: 40px 
+		font-size: 26px
+		color: #222E3E  
+		height: 58px
+		width: 200px 
+	.input__currency
+		position: absolute
+		font-size: 16px
+		color: #D3D5D9  
+		position: absolute
+		right: 0
+		top: 0 
+		padding-right: 20px 
+		height: 58px  
+		line-height: 58px 
+.buycustom
+	margin-bottom: 88px 
+	text-align: center
+	font-size: 14px 
+	color: #AAAFB8 
+	h2
+		font-size: 18px 
+		color: #2A3E5B 
+		font-weight: normal
+		margin-bottom: 14px 
+		color: #2A3D5B 
+	.buycustom__form
+		width: 730px 
+		margin: 34px auto 0 auto 
+		text-align: left
+		.more
+			margin-left: 19px 
+			font-size: 11px 
+			color: #697385 
+			margin-top: 8px 
+	.buycustom__submit
+		height: 60px 
+		line-height: 60px
+		display: inline-block
+		text-decoration: none 
+		width: 138px
+		background: #75C269 
+		color: #fff 
+		font-size: 20px 
+		text-align: center
+		cursor: pointer  
+		vertical-align: middle
+		border-radius: 6px
+.offers
+	+clr
+.offer
+	float: left
+	width: 25% 
+	height: 283px 
+	cursor: pointer
+	text-align: center
+	+box
+	border: 1px solid #E0E6E8 
+	border-right: none 
+	position: relative
+	&>*
+		position: relative
+		z-index: 10 
+	&:last-child
+		border-right: 1px solid #E0E6E8 
+		border-top-right-radius: 6px 
+		border-bottom-right-radius: 6px
+	&:first-child
+		border-top-left-radius: 6px 
+		border-bottom-left-radius: 6px
+		
+	.offer__buy
+		text-align: center
+		.offer__btn
+			width: 100px 
+			display: inline-block
+			height: 40px 
+			line-height: 40px
+			border: 1px solid #E9EEEF  
+			border-radius: 40px
+			font-size: 14px 
+			color: #2A3D5B
+			text-align: center 
+			+gprobold
+	.offer__best
+		width: 180px 
+		height: 26px
+		background: #20BCC4  
+		line-height: 26px
+		text-transform: uppercase
+		position: absolute
+		left: 50%
+		margin-left: -90px   
+		border-bottom-right-radius: 6px
+		border-bottom-left-radius: 6px
+		font-size: 11px 
+		color: #fff 
+	.offer__pre
+		padding-top: 31px 
+		color: #1FBCC4 
+		font-size: 20px
+		+gprobold
+		margin-bottom: 13px 
+	.offer__for
+		font-size: 11px 
+		color: #2A3E5B 
+		text-transform: uppercase
+		padding-bottom: 20px 
+		display: inline-block
+		margin-bottom: 20px 
+		width: 140px
+		border-bottom: 1px solid #E0E6E8 
+	.offer__value
+		font-size: 40px  
+		color: #2A3E5B
+		+gprobold 
+		margin-bottom: 27px 
+	&:hover,&.is-best
+		.offer__btn
+			color: #fff 
+			background: #20BCC4  
+			border-color: #20BCC4 
+		.offer__value
+			color: #20BCC4 
+		.offer__for
+			border-color: #20BCC4 
+	&.is-best
+		z-index: 100 
+		.offer__best
+			top: -15px 
+		&:before
+			content: ' '
+			position: absolute
+			top: -16px 
+			right: -16px 
+			left: -16px 
+			bottom: -16px 
+			border: 2px solid #20BCC4 
+			background: #fff 
+			border-radius: 10px
+
+	
+
+
+
+
+
 
 
