@@ -224,8 +224,6 @@ h1
 .main
 	margin: 70px 0 
 	font-size: 11px
-	border-right: 1px solid #e3e8ea
-	border-radius: 10px
 	+clr
 	.main__bl
 		position: relative
@@ -235,28 +233,35 @@ h1
 		padding: 45px 5.2%
 		z-index: 1
 		+box
+		&:first-child
+			&:before
+				border-top-left-radius: 10px
+				border-bottom-left-radius: 10px
+		&:last-child
+			&:before
+				border-right: 1px solid #e3e8ea
+				border-top-right-radius: 10px
+				border-bottom-right-radius: 10px
 		&:before
 			content: ""
 			position: absolute
-			top: 0
-			left: 0
 			width: 100%
-			height: 100%  
+			height: 100%
+			top: 0
+			left: 0  
 			border: 1px solid #e3e8ea
 			border-right-width: 0 
-			border-radius: 10px
 		&:after
 			content: ""
 			visibility: hidden 
 			position: absolute
-			top: -5%
-			left: -4%
-			width: 108%
-			height: 110%
+			width: 100%
+			height: 100%  
+			top: 0
+			left: 0
 			box-shadow: 0 0 0 3px #03bcc5 	
 			border-radius: 10px
 			background: #FFF 
-			+transform(scale(0.8))
 		h2
 			margin-bottom: 20px 
 			color: #293D5C
@@ -273,8 +278,9 @@ h1
 				visibility: hidden
 			&:after
 				visibility: visible
-				+transform(scale(1))
-				+transition(transform 0.3s ease)
+				top: -5%
+				height: 110%
+				+transition(all 0.5s ease)
 			.main__img
 				&:before
 					+opacity(0)
@@ -288,9 +294,10 @@ h1
 		margin: 0 auto 30px
 		&:before
 			content: ""
-			display: inline-block
+			display: block
+			margin: 0 auto
 			+transition(all 0.8s ease)
-			+translate3d
+			+gpu
 		&:after
 			content: ""
 			position: absolute
@@ -299,7 +306,7 @@ h1
 			margin-left: -85px
 			+opacity(0)
 			+transition(all 0.8s ease)
-			+translate3d		
+			+gpu
 	.shop
 		&:before			
 			+s(shop)		
@@ -521,21 +528,52 @@ h1
 	height: 283px 
 	cursor: pointer
 	text-align: center
-	+box
-	border: 1px solid #E0E6E8 
-	border-right: none 
 	position: relative
+	+box
 	&>*
 		position: relative
-		z-index: 10 
+		z-index: 10
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0  
+		border: 1px solid #e3e8ea
+		border-right-width: 0 
+	&:after
+		content: ""
+		visibility: hidden 
+		position: absolute
+		width: 100%
+		height: 100%  
+		top: 0
+		left: 0
+		box-shadow: 0 0 0 2px #03bcc5 	
+		border-radius: 10px
+		background: #FFF 
+	&:hover
+		z-index: 2
+		&:before
+			visibility: hidden
+		&:after
+			visibility: visible
+			top: -5%
+			height: 110%
+			+transition(all 0.5s ease)
+		.offer__best
+			+transform(translateY(-60%))
+			+transition(transform 0.5s ease)	
 	&:last-child
-		border-right: 1px solid #E0E6E8 
-		border-top-right-radius: 6px 
-		border-bottom-right-radius: 6px
+		&:before
+			border-right: 1px solid #E0E6E8 
+			border-top-right-radius: 6px 
+			border-bottom-right-radius: 6px
 	&:first-child
-		border-top-left-radius: 6px 
-		border-bottom-left-radius: 6px
-		
+		&:before
+			border-top-left-radius: 6px 
+			border-bottom-left-radius: 6px		
 	.offer__buy
 		text-align: center
 		.offer__btn
