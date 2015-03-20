@@ -231,7 +231,6 @@ h1
 		position: relative
 		float: left
 		width: 33% 
-		background: #fff 
 		text-align: center
 		padding: 45px 5.2%
 		z-index: 1
@@ -254,9 +253,9 @@ h1
 			left: -4%
 			width: 108%
 			height: 110%
-			border: 3px solid #03bcc5 	
+			box-shadow: 0 0 0 3px #03bcc5 	
 			border-radius: 10px
-			box-shadow: inset 30px 30px 0px 0px #fff, inset -30px -30px 0px 0px #fff
+			background: #FFF 
 			+transform(scale(0.8))
 		h2
 			margin-bottom: 20px 
@@ -276,20 +275,46 @@ h1
 				visibility: visible
 				+transform(scale(1))
 				+transition(transform 0.3s ease)
-			.shop
-				+s(shop-active)
-			.trade
-				+s(trade-active)
-			.wallet
-				+s(wallet-active)	
+			.main__img
+				&:before
+					+opacity(0)
+				&:after
+					+opacity(1)
+	.main__in
+		position: relative
+		z-index: 3			
 	.main__img
-		margin: 0 auto 30px					
+		position: relative
+		margin: 0 auto 30px
+		&:before
+			content: ""
+			display: inline-block
+			+transition(all 0.8s ease)
+			+translate3d
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -85px
+			+opacity(0)
+			+transition(all 0.8s ease)
+			+translate3d		
 	.shop
-		+s(shop)
+		&:before			
+			+s(shop)		
+		&:after
+			+s(shop-active)				
 	.trade
-		+s(trade)		
+		&:before
+			+s(trade)
+		&:after
+			+s(trade-active)			
 	.wallet
-		+s(wallet)
+		&:before
+			+s(wallet)
+		&:after
+			+s(wallet-active)	
 
 .wrapper
 	margin: 70px 0 

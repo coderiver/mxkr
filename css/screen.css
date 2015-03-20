@@ -165,22 +165,27 @@ h1.superheading { font-size: 40px; text-transform: uppercase; }
 
 .main { margin: 70px 0; font-size: 11px; border-right: 1px solid #e3e8ea; border-radius: 10px; *zoom: 1; }
 .main:after { content: " "; display: table; clear: both; }
-.main .main__bl { position: relative; float: left; width: 33%; background: white; text-align: center; padding: 45px 5.2%; z-index: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.main .main__bl { position: relative; float: left; width: 33%; text-align: center; padding: 45px 5.2%; z-index: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .main .main__bl:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #e3e8ea; border-right-width: 0; border-radius: 10px; }
-.main .main__bl:after { content: ""; visibility: hidden; position: absolute; top: -5%; left: -4%; width: 108%; height: 110%; border: 3px solid #03bcc5; border-radius: 10px; box-shadow: inset 30px 30px 0px 0px white, inset -30px -30px 0px 0px white; -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
+.main .main__bl:after { content: ""; visibility: hidden; position: absolute; top: -5%; left: -4%; width: 108%; height: 110%; box-shadow: 0 0 0 3px #03bcc5; border-radius: 10px; background: white; -moz-transform: scale(0.8); -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); }
 .main .main__bl h2 { margin-bottom: 20px; color: #293d5c; text-transform: uppercase; font-family: "GothaProBol", Arial, sans-serif; }
 .main .main__bl p { color: #bdbdc5; font-family: "GothaProMedium", Arial, sans-serif; }
 .main .main__bl:hover { z-index: 2; }
 .main .main__bl:hover h2 { color: #03bcc5; }
 .main .main__bl:hover:before { visibility: hidden; }
 .main .main__bl:hover:after { visibility: visible; -moz-transform: scale(1); -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; }
-.main .main__bl:hover .shop { background: url('../img/icons-sf111d0a8ba.png') 0 -30px no-repeat; width: 170px; height: 150px; }
-.main .main__bl:hover .trade { background: url('../img/icons-sf111d0a8ba.png') 0 -350px no-repeat; width: 170px; height: 150px; }
-.main .main__bl:hover .wallet { background: url('../img/icons-sf111d0a8ba.png') 0 -670px no-repeat; width: 170px; height: 150px; }
-.main .main__img { margin: 0 auto 30px; }
-.main .shop { background: url('../img/icons-sf111d0a8ba.png') 0 -190px no-repeat; width: 170px; height: 150px; }
-.main .trade { background: url('../img/icons-sf111d0a8ba.png') 0 -510px no-repeat; width: 170px; height: 150px; }
-.main .wallet { background: url('../img/icons-sf111d0a8ba.png') 0 -830px no-repeat; width: 170px; height: 150px; }
+.main .main__bl:hover .main__img:before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.main .main__bl:hover .main__img:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.main .main__in { position: relative; z-index: 3; }
+.main .main__img { position: relative; margin: 0 auto 30px; }
+.main .main__img:before { content: ""; display: inline-block; -moz-transition: all 0.8s ease; -o-transition: all 0.8s ease; -webkit-transition: all 0.8s ease; transition: all 0.8s ease; -moz-transform: translate3d(1em, 1em, 1em); -webkit-transform: translate3d(1em, 1em, 1em); transform: translate3d(1em, 1em, 1em); }
+.main .main__img:after { content: ""; position: absolute; top: 0; left: 50%; margin-left: -85px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: all 0.8s ease; -o-transition: all 0.8s ease; -webkit-transition: all 0.8s ease; transition: all 0.8s ease; -moz-transform: translate3d(1em, 1em, 1em); -webkit-transform: translate3d(1em, 1em, 1em); transform: translate3d(1em, 1em, 1em); }
+.main .shop:before { background: url('../img/icons-sf111d0a8ba.png') 0 -190px no-repeat; width: 170px; height: 150px; }
+.main .shop:after { background: url('../img/icons-sf111d0a8ba.png') 0 -30px no-repeat; width: 170px; height: 150px; }
+.main .trade:before { background: url('../img/icons-sf111d0a8ba.png') 0 -510px no-repeat; width: 170px; height: 150px; }
+.main .trade:after { background: url('../img/icons-sf111d0a8ba.png') 0 -350px no-repeat; width: 170px; height: 150px; }
+.main .wallet:before { background: url('../img/icons-sf111d0a8ba.png') 0 -830px no-repeat; width: 170px; height: 150px; }
+.main .wallet:after { background: url('../img/icons-sf111d0a8ba.png') 0 -670px no-repeat; width: 170px; height: 150px; }
 
 .wrapper { margin: 70px 0; padding-bottom: 42px; *zoom: 1; }
 .wrapper:after { content: " "; display: table; clear: both; }
