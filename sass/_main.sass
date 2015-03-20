@@ -248,20 +248,22 @@ h1
 			width: 100%
 			height: 100%
 			top: 0
-			left: 0  
+			left: 0 
+			right: 0
+			bottom: 0
 			border: 1px solid #e3e8ea
 			border-right-width: 0 
 		&:after
-			content: ""
-			visibility: hidden 
-			position: absolute
-			width: 100%
-			height: 100%  
+			content: "" 
+			position: absolute 
 			top: 0
 			left: 0
+			right: 0
+			bottom: 0
 			box-shadow: 0 0 0 3px #03bcc5 	
 			border-radius: 10px
-			background: #FFF 
+			background: #FFF
+			+opacity(0) 
 		h2
 			margin-bottom: 20px 
 			color: #293D5C
@@ -275,11 +277,11 @@ h1
 			h2
 				color: #03BCC5 
 			&:before
-				visibility: hidden
+				+opacity(0)
 			&:after
-				visibility: visible
-				top: -5%
-				height: 110%
+				top: -20px
+				bottom: -20px
+				+opacity(1)
 				+transition(all 0.5s ease)
 			.main__img
 				&:before
@@ -296,7 +298,7 @@ h1
 			content: ""
 			display: block
 			margin: 0 auto
-			+transition(all 0.8s ease)
+			+transition(all 0.5s ease)
 			+gpu
 		&:after
 			content: ""
@@ -544,27 +546,28 @@ h1
 		border-right-width: 0 
 	&:after
 		content: ""
-		visibility: hidden 
+		+opacity(0)
 		position: absolute
-		width: 100%
-		height: 100%  
 		top: 0
 		left: 0
+		right: 0
+		bottom: 0
 		box-shadow: 0 0 0 2px #03bcc5 	
 		border-radius: 10px
 		background: #FFF 
 	&:hover
 		z-index: 2
 		&:before
-			visibility: hidden
+			+opacity(0)
 		&:after
-			visibility: visible
-			top: -5%
-			height: 110%
-			+transition(all 0.5s ease)
+			+opacity(1)
+			top: -15px
+			bottom: -15px
+			right: -15px
+			left: -15px
+			+transition(top 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease)
 		.offer__best
-			+transform(translateY(-60%))
-			+transition(transform 0.5s ease)	
+			+transform(translateY(-15px))
 	&:last-child
 		&:before
 			border-right: 1px solid #E0E6E8 
@@ -599,7 +602,8 @@ h1
 		border-bottom-right-radius: 6px
 		border-bottom-left-radius: 6px
 		font-size: 11px 
-		color: #fff 
+		color: #fff
+		+transition(transform 0.3s ease)  
 	.offer__pre
 		padding-top: 31px 
 		color: #1FBCC4 
@@ -632,7 +636,7 @@ h1
 	&.is-best
 		z-index: 100 
 		.offer__best
-			top: -15px 
+			top: -15px
 		&:before
 			content: ' '
 			position: absolute
@@ -643,3 +647,34 @@ h1
 			border: 2px solid #20BCC4 
 			background: #fff 
 			border-radius: 10px
+			
+.currency
+	+clr
+	.currency__in
+		margin-top: 20px 
+		float: right
+		font-size: 14px 
+		+clr
+	.currency__span, .dropdown
+		display: inline-block
+		vertical-align: middle
+	.currency__span
+		color: #BDBDC5
+		margin-right: 5px 
+	.dropdown
+		color: #03BCC5
+		+gprobold
+	.dropdown__menu
+		background: none
+		padding-top: 10px 
+	.dropdown__text
+		padding: 0 	
+	.dropdown__link
+		padding: 0 0 5px 0
+		font-size: 14px 	
+	.icon-arrdown
+		margin-left: 10px 
+		&:before
+			vertical-align: middle
+
+		
