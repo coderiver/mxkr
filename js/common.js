@@ -6,6 +6,11 @@ head.ready(function() {
 		$(this).find('.is-hidden').toggleClass('is-visible');
 	});
 
+	$('.select__option').on("click", function(event){
+		$('.select__option').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });

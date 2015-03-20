@@ -1,0 +1,115 @@
+//popup
+.popupwrap
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(#232A34, 0.8)
+	z-index: 200
+	white-space: nowrap
+	+vertical
+
+.popup
+	display: inline-block
+	vertical-align: middle
+	min-width: 500px 
+	background: #fff
+	white-space: normal
+	z-index: 300 
+	+gpro
+	.is-bold
+		+gprobold 	
+	.is-medium
+		+gpromed		
+	.popup__head
+		position: relative
+		font-size: 20px 
+		border-bottom: 1px solid #E5E9EC		
+	.popup__in
+		padding: 30px  
+		+box	
+	.popup__close
+		position: absolute
+		top: 37px
+		right: 30px 
+		background: url(../img/font/x.svg) no-repeat
+		width: 11px
+		height: 12px  
+		cursor: pointer
+	.popup__body
+		color: #858688
+		font-size: 13px 
+		h2
+			margin-bottom: 30px 
+			font-size: 20px 
+			color: #000 	 
+		h3
+			margin-bottom: 18px
+			font-size: 16px 
+			color: #000 
+	.clock
+		margin: 50px 0 10px
+		text-align: center
+		font-size: 14px
+		color: #E0E6E8	
+	.clock__time
+		font-size: 20px 	
+	.icon-clock
+		font-size: 58px
+		color: #E0E6E8 
+	.popup__bottom
+		position: relative
+		background: #F4F4F4
+		color: #858688 
+		&:before
+			content: " "
+			background: linear-gradient(-45deg, #f4f4f4 8px, transparent 0), linear-gradient(45deg, #f4f4f4 8px, transparent 0) repeat-x
+			background-size: 16px 16px
+			display: block
+			position: absolute
+			top: -16px
+			left: 0px
+			width: 100%
+			height: 32px
+	.total__row
+		margin-bottom: 15px 
+		font-size: 14px
+		+clr
+		&:last-child
+			color: #000 
+	.total__cell
+		float: right
+		&:first-child
+			float: left
+		&.is-medium
+			font-size: 16px 
+	.alert
+		text-align: center	
+		margin: 50px 0 10px
+		color: #e66767	
+		font-size: 14px 
+	.icon-alert
+		font-size: 65px 
+	.success
+		padding-top: 20px 
+		text-align: center
+		font-size: 11px 
+		color: #858688
+		h3
+			margin-bottom: 5px 
+		.popup__close
+			top: 20px
+		.btn
+			margin-top: 25px 		
+	.icon-prize
+		font-size: 60px 
+		color: #DEDEE2 					
+	.btn
+		width: 100%
+		padding: 20px 0  
+		font-size: 14px 
+		background: #4fc0e8 
+		color: #FFF 	
+		border-radius: 3px 
+		+gpromed			 		
