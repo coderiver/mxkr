@@ -11,6 +11,19 @@ head.ready(function() {
 		$(this).addClass('is-active');
 	});
 
+	function progress () {
+		
+		var pushButton = $('.offer__btn'),
+				   bar = $('.offer__for');
+
+		$(pushButton).click(function(){
+			bar.removeClass('is-active');
+			$(this).closest('.offer').find(bar).addClass('is-active');
+		});		
+	}
+
+	progress();
+
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
