@@ -11,6 +11,7 @@ head.ready(function() {
 		$(this).addClass('is-active');
 	});
 
+	//progress bar on bundles
 	function progress () {
 		
 		var pushButton = $('.offer__btn'),
@@ -24,19 +25,26 @@ head.ready(function() {
 
 	progress();
 
+	//info tooltip on hover
+	function tiptool (){
+
+		var tooltip = $('.js-tip').children('.tooltip'),
+			icon   = $('.js-tip').children('.js-hover');
+
+		icon.mouseover(function() {
+			$(this).closest('.js-tip').find(tooltip).removeClass('is-hidden');
+		});
+
+		icon.mouseleave(function() {
+			$(this).closest('.js-tip').find(tooltip).addClass('is-hidden');
+		});	
+
+	}
+
+	tiptool();
+
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
-	// });
-
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
 	// });
 
 });

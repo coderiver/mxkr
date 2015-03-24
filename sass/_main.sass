@@ -492,7 +492,10 @@ h1
 		top: 0 
 		padding-right: 20px 
 		height: 58px  
-		line-height: 58px 
+		line-height: 58px
+	&.is-error
+		input
+			border-color: #e4686a  	 
 .buycustom
 	margin-bottom: 88px 
 	text-align: center
@@ -511,7 +514,9 @@ h1
 		.more
 			font-size: 11px 
 			color: #697385 
-			margin-top: 8px 
+			margin-top: 8px
+	.buycustom__wrap
+		display: inline-block		 
 	.buycustom__submit
 		height: 60px 
 		line-height: 60px
@@ -579,7 +584,11 @@ h1
 	&:first-child
 		&:before
 			border-top-left-radius: 6px 
-			border-bottom-left-radius: 6px		
+			border-bottom-left-radius: 6px
+	&.is-green-bar
+		.offer__for
+			&:before
+				background: #03bcc5					
 	.offer__buy
 		text-align: center
 		.offer__btn
@@ -640,10 +649,7 @@ h1
 			&:before
 				width: 100% 
 				z-index: 2
-				+transition(width 0.6s ease-out)
-		&.is-green-bar
-			&:before
-				background: #03bcc5 			
+				+transition(width 0.6s ease-out) 			
 	.offer__value
 		font-size: 40px  
 		color: #2A3E5B
@@ -702,4 +708,44 @@ h1
 		&:before
 			vertical-align: middle
 
+//timer
+.timer
+	position: relative
+	margin-bottom: 55px 
+	text-align: center
+	font-size: 14px
+	color: #AAAFB8
+	span
+		display: inline-block
+		border-bottom: 1px dotted #AAAFB8 	
+	.icon-info
+		margin-left: 5px 	
+		vertical-align: middle
+		cursor: pointer
+	.tooltip
+		left: 50.8%
+		bottom: 30px 
+	
+.tooltip
+	position: absolute
+	max-width: 290px
+	padding: 17px 25px 19px
+	text-align: center
+	font-size: 12px 
+	background: #232a33
+	color: #FEFEFE	
+	border-radius: 3px  
+	z-index: 300	
+	+box
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		bottom: -8px
+		margin-left: -8px 
+		+arr(16, 8, #232a33, b)
 		
+//error
+.error
+	margin-bottom: 10px 
+	color: #e4686a 		

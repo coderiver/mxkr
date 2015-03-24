@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Popup page 2</title>
+	<title>Popup page 4</title>
 	<meta name="viewport" content="initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <meta name="viewport" content="width=1200"> -->
@@ -226,13 +226,13 @@
 			</div>			
 		</div>
 		<div class="popup__body">
-			<div class="popup__in">
+			<div class="popup__in is-warning">
+				<p class="popup__warning">Oops, something went wrong. Price has been recalculated, please try again.</p>
 				<h3>You are about to get <span class="is-bold">2.0234</span>BTC for <span class="is-bold">430</span>USD</h3>
 				<p>Exchange rate: 226.98USD</p>
 				<div class="alert">
 					<i class="icon-alert"></i>
-					<p>Sorry this trade cannot be triggered right now,</p>
-					<p>please try once more a minute.</p>
+					<p>Maximum amount for one order is 10BTC</p>
 				</div>
 			</div>			
 		</div>
@@ -240,16 +240,8 @@
 			<div class="popup__in">
 				<div class="popup__total">
 					<div class="total__row">
-						<p class="total__cell">Subtotal</p>
-						<p class="total__cell">150.00 USD</p>
-					</div>
-					<div class="total__row">
-						<p class="total__cell">0.5 USD comission + 4.5% of the sum </p>
-						<p class="total__cell">5.35 USD</p>
-					</div>
-					<div class="total__row">
 						<p class="total__cell is-medium">Total</p>
-						<p class="total__cell is-medium">316.57 USD</p>
+						<p class="total__cell is-medium">430.00 USD</p>
 					</div>
 				</div>
 				<button class="btn" type="button">Confirm the trade</button>
